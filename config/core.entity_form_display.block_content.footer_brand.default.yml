@@ -1,0 +1,70 @@
+uuid: 46eff656-0005-49b6-8c91-b89a323f5747
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_brand
+    - field.field.block_content.footer_brand.field_footer_icon
+    - field.field.block_content.footer_brand.field_footer_logo
+    - field.field.block_content.footer_brand.field_university_name_ar
+    - field.field.block_content.footer_brand.field_university_name_en
+    - image.style.thumbnail
+  module:
+    - image
+    - paragraphs
+id: block_content.footer_brand.default
+targetEntityType: block_content
+bundle: footer_brand
+mode: default
+content:
+  field_footer_icon:
+    type: paragraphs
+    weight: 4
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_footer_logo:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_university_name_ar:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_university_name_en:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

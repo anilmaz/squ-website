@@ -1,0 +1,10 @@
+uuid: a7b0ef94-d159-4214-ad55-076d511f1987
+langcode: en
+status: true
+dependencies: {  }
+id: research_card
+label: 'Research Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

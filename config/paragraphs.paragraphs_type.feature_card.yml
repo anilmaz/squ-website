@@ -1,0 +1,10 @@
+uuid: f0cc6820-ecf0-4c72-9580-b50fc0f24d7b
+langcode: en
+status: true
+dependencies: {  }
+id: feature_card
+label: 'Feature Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: acdca7d6-b768-4d0c-ae63-224690f752b7
+langcode: en
+status: true
+dependencies: {  }
+id: student_life_section
+label: 'Student Life Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,51 @@
+services:
+  db:
+    image: postgres:16
+    container_name: squ_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - squ_pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  drupal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: squ_drupal
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "8090:80"
+    volumes:
+      # Sync folders to your Windows drive so Git can see all modifications
+      - ./web/sites:/var/www/html/sites
+      - ./web/modules:/var/www/html/modules
+      - ./web/profiles:/var/www/html/profiles
+      - ./web/themes:/var/www/html/themes
+      - ./assets:/var/www/html/assets_import
+    environment:
+      DRUPAL_DB_HOST: db
+      DRUPAL_DB_NAME: ${DB_NAME}
+      DRUPAL_DB_USER: ${DB_USER}
+      DRUPAL_DB_PASSWORD: ${DB_PASSWORD}
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: squ_pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+volumes:
+  squ_pgdata:

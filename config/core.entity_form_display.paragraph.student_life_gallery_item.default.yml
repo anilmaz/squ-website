@@ -1,0 +1,35 @@
+uuid: b1db84a2-2c5b-4fc0-892f-915b0f6b4e2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.student_life_gallery_item.field_image_caption
+    - field.field.paragraph.student_life_gallery_item.field_images
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.student_life_gallery_item
+  module:
+    - image
+id: paragraph.student_life_gallery_item.default
+targetEntityType: paragraph
+bundle: student_life_gallery_item
+mode: default
+content:
+  field_image_caption:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_images:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

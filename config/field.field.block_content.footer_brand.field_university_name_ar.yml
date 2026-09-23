@@ -1,0 +1,19 @@
+uuid: afd0ae07-1276-4087-a9fd-937019242dc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_brand
+    - field.storage.block_content.field_university_name_ar
+id: block_content.footer_brand.field_university_name_ar
+field_name: field_university_name_ar
+entity_type: block_content
+bundle: footer_brand
+label: 'University Name Ar'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

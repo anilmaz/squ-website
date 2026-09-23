@@ -1,0 +1,23 @@
+uuid: 3524d119-bc9f-4d1e-9971-092834aeb69a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_footer_icon_link
+    - paragraphs.paragraphs_type.footer_icons
+  module:
+    - link
+id: paragraph.footer_icons.field_footer_icon_link
+field_name: field_footer_icon_link
+entity_type: paragraph
+bundle: footer_icons
+label: 'Footer Icon Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

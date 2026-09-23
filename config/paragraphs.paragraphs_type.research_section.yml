@@ -1,0 +1,10 @@
+uuid: 207af48d-f7b3-4a3f-b5cc-0454bfe595b2
+langcode: en
+status: true
+dependencies: {  }
+id: research_section
+label: 'Research Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

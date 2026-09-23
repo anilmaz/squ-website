@@ -1,0 +1,10 @@
+uuid: 9eff81b8-85df-42b8-9b58-e4be49bd6ebc
+langcode: en
+status: true
+dependencies: {  }
+id: statistics_counter
+label: 'Statistics Counter '
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

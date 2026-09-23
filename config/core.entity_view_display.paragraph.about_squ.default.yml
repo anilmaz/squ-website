@@ -1,0 +1,71 @@
+uuid: 3f3260af-de33-40e7-86c0-8ebfd9a7c5c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_squ.field_about_background_image
+    - field.field.paragraph.about_squ.field_about_squ_heading
+    - field.field.paragraph.about_squ.field_about_squ_link1
+    - field.field.paragraph.about_squ.field_about_squ_link2
+    - field.field.paragraph.about_squ.field_about_squ_text
+    - paragraphs.paragraphs_type.about_squ
+  module:
+    - image
+    - link
+id: paragraph.about_squ.default
+targetEntityType: paragraph
+bundle: about_squ
+mode: default
+content:
+  field_about_background_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_about_squ_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_about_squ_link1:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_about_squ_link2:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_about_squ_text:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

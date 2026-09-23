@@ -1,0 +1,19 @@
+uuid: d333b322-0e54-44b7-9a95-c0eb8d7a51d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_brand
+    - field.storage.block_content.field_university_name_en
+id: block_content.footer_brand.field_university_name_en
+field_name: field_university_name_en
+entity_type: block_content
+bundle: footer_brand
+label: 'University Name En'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,61 @@
+uuid: 0d35f9ec-ec6d-4c13-b23f-6fac39af7c9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_section.field_more_link
+    - field.field.paragraph.news_section.field_news_heading
+    - field.field.paragraph.news_section.field_news_items
+    - field.field.paragraph.news_section.field_news_section_image
+    - paragraphs.paragraphs_type.news_section
+  module:
+    - entity_reference_revisions
+    - image
+    - link
+id: paragraph.news_section.default
+targetEntityType: paragraph
+bundle: news_section
+mode: default
+content:
+  field_more_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_news_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_news_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_news_section_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

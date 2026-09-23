@@ -1,0 +1,55 @@
+uuid: 4eee9add-8bb3-4ffa-9d88-714146528ee0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.research_innovation.field_link
+    - field.field.node.research_innovation.field_research_image
+    - field.field.node.research_innovation.field_research_summary
+    - node.type.research_innovation
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.research_innovation.default
+targetEntityType: node
+bundle: research_innovation
+mode: default
+content:
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_research_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_research_summary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

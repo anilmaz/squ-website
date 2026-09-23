@@ -1,0 +1,19 @@
+uuid: ba1d80d9-316e-4c93-8adf-d0dcdb52eea3
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_news_description
+field_name: field_news_description
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

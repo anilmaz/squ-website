@@ -1,0 +1,25 @@
+uuid: f1ed503f-87bc-4234-890f-f740f78f5d78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.search_widget.field_filter_form
+    - paragraphs.paragraphs_type.search_widget
+  module:
+    - webform
+id: paragraph.search_widget.default
+targetEntityType: paragraph
+bundle: search_widget
+mode: default
+content:
+  field_filter_form:
+    type: webform_entity_reference_select
+    weight: 0
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

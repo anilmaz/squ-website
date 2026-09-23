@@ -1,0 +1,19 @@
+uuid: 5c2fcb2b-2186-4eac-8ba4-c813f1af06e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_research_card_description
+    - paragraphs.paragraphs_type.research_card
+id: paragraph.research_card.field_research_card_description
+field_name: field_research_card_description
+entity_type: paragraph
+bundle: research_card
+label: 'Research Card Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

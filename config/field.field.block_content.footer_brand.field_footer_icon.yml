@@ -1,0 +1,64 @@
+uuid: 4c8296f9-f577-4b2f-9ab0-7992c344d5a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_brand
+    - field.storage.block_content.field_footer_icon
+    - paragraphs.paragraphs_type.footer_icons
+  module:
+    - entity_reference_revisions
+id: block_content.footer_brand.field_footer_icon
+field_name: field_footer_icon
+entity_type: block_content
+bundle: footer_brand
+label: 'Footer Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      footer_icons: footer_icons
+    negate: 0
+    target_bundles_drag_drop:
+      about_squ:
+        weight: 12
+        enabled: false
+      feature_card:
+        weight: 13
+        enabled: false
+      footer_icons:
+        weight: 15
+        enabled: true
+      hero_banner:
+        weight: 14
+        enabled: false
+      news_item:
+        weight: 15
+        enabled: false
+      news_section:
+        weight: 16
+        enabled: false
+      research_card:
+        weight: 17
+        enabled: false
+      research_section:
+        weight: 18
+        enabled: false
+      search_widget:
+        weight: 19
+        enabled: false
+      statistics_counter:
+        weight: 20
+        enabled: false
+      student_life_gallery_item:
+        weight: 21
+        enabled: false
+      student_life_section:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

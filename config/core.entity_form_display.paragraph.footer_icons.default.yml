@@ -1,0 +1,36 @@
+uuid: 3e6cea54-3f76-4e5a-8adc-94a61efa1940
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.footer_icons.field_footer_icon_link
+    - field.field.paragraph.footer_icons.field_footer_icons
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.footer_icons
+  module:
+    - image
+    - link
+id: paragraph.footer_icons.default
+targetEntityType: paragraph
+bundle: footer_icons
+mode: default
+content:
+  field_footer_icon_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_footer_icons:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

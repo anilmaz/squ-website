@@ -1,0 +1,22 @@
+uuid: 5f26bc2d-d12b-4c90-8e66-3d5a950b5b31
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - olivero
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: olivero_powered
+theme: olivero
+region: footer_bottom
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: '© 2026  Sultan Qaboos University. All Rights Reserved'
+  label_display: visible
+  provider: system
+visibility: {  }

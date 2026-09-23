@@ -1,0 +1,19 @@
+uuid: 25eb3742-1928-41d1-a868-1e27b64f7119
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_student_life_title
+    - paragraphs.paragraphs_type.student_life_section
+id: paragraph.student_life_section.field_student_life_title
+field_name: field_student_life_title
+entity_type: paragraph
+bundle: student_life_section
+label: 'Student Life Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

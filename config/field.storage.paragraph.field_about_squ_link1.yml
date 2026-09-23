@@ -1,0 +1,19 @@
+uuid: 7d7ba38c-d778-43bd-847b-62f4c680088f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_about_squ_link1
+field_name: field_about_squ_link1
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

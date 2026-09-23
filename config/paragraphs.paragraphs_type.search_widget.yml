@@ -1,0 +1,10 @@
+uuid: 9e3a9d1e-d610-4da8-8ca0-c29f9e303562
+langcode: en
+status: true
+dependencies: {  }
+id: search_widget
+label: 'Search Widget'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

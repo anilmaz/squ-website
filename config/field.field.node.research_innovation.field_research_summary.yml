@@ -1,0 +1,24 @@
+uuid: a1996320-c415-48ee-b159-96cddc5c27c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_summary
+    - node.type.research_innovation
+  module:
+    - text
+id: node.research_innovation.field_research_summary
+field_name: field_research_summary
+entity_type: node
+bundle: research_innovation
+label: 'Research Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -1,0 +1,31 @@
+uuid: 422aa000-88ef-4b1b-b2a2-92dc04696b60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistics_counter.field_statistics_label
+    - field.field.paragraph.statistics_counter.field_statistics_number
+    - paragraphs.paragraphs_type.statistics_counter
+id: paragraph.statistics_counter.default
+targetEntityType: paragraph
+bundle: statistics_counter
+mode: default
+content:
+  field_statistics_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_statistics_number:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

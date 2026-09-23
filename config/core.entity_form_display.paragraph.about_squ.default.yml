@@ -1,0 +1,63 @@
+uuid: 2408087d-7e2d-48cd-9c93-199b543d1b1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_squ.field_about_background_image
+    - field.field.paragraph.about_squ.field_about_squ_heading
+    - field.field.paragraph.about_squ.field_about_squ_link1
+    - field.field.paragraph.about_squ.field_about_squ_link2
+    - field.field.paragraph.about_squ.field_about_squ_text
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.about_squ
+  module:
+    - image
+    - link
+id: paragraph.about_squ.default
+targetEntityType: paragraph
+bundle: about_squ
+mode: default
+content:
+  field_about_background_image:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_about_squ_heading:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_about_squ_link1:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_about_squ_link2:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_about_squ_text:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

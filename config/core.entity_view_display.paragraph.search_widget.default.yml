@@ -1,0 +1,24 @@
+uuid: 2ffe6734-735f-4cfc-977d-ed21e663e227
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.search_widget.field_filter_form
+    - paragraphs.paragraphs_type.search_widget
+  module:
+    - webform
+id: paragraph.search_widget.default
+targetEntityType: paragraph
+bundle: search_widget
+mode: default
+content:
+  field_filter_form:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

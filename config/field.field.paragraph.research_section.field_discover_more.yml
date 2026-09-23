@@ -1,0 +1,23 @@
+uuid: f95fa8d8-59bf-4457-915e-6eeabbd63fd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_discover_more
+    - paragraphs.paragraphs_type.research_section
+  module:
+    - link
+id: paragraph.research_section.field_discover_more
+field_name: field_discover_more
+entity_type: paragraph
+bundle: research_section
+label: 'Discover More'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

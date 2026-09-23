@@ -1,0 +1,42 @@
+uuid: 190e6e63-c4d7-471b-8e53-441ab9649d14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_item.field_news_date
+    - field.field.paragraph.news_item.field_news_description
+    - field.field.paragraph.news_item.field_news_title
+    - paragraphs.paragraphs_type.news_item
+  module:
+    - datetime
+id: paragraph.news_item.default
+targetEntityType: paragraph
+bundle: news_item
+mode: default
+content:
+  field_news_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_news_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_news_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,56 @@
+uuid: fdfe6c18-f498-4690-af0a-fb9f01302d04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.research_section.field_discover_more
+    - field.field.paragraph.research_section.field_research_card
+    - field.field.paragraph.research_section.field_research_description
+    - field.field.paragraph.research_section.field_research_heading
+    - paragraphs.paragraphs_type.research_section
+  module:
+    - entity_reference_revisions
+    - link
+id: paragraph.research_section.default
+targetEntityType: paragraph
+bundle: research_section
+mode: default
+content:
+  field_discover_more:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_research_card:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_research_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_research_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

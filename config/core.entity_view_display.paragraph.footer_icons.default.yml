@@ -1,0 +1,40 @@
+uuid: fa979c1c-cf24-45cc-b50f-427aa9fd9ea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.footer_icons.field_footer_icon_link
+    - field.field.paragraph.footer_icons.field_footer_icons
+    - paragraphs.paragraphs_type.footer_icons
+  module:
+    - image
+    - link
+id: paragraph.footer_icons.default
+targetEntityType: paragraph
+bundle: footer_icons
+mode: default
+content:
+  field_footer_icon_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_footer_icons:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,7 @@
+name: SQU Custom Theme
+type: theme
+base theme: olivero
+description: 'Sitewide custom styling for the SQU public website'
+core_version_requirement: ^10 || ^11
+libraries:
+  - squ_theme/global-styling

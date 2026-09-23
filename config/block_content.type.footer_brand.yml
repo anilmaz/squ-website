@@ -1,0 +1,8 @@
+uuid: f69ac58e-20ad-4215-a903-2240121659e9
+langcode: en
+status: true
+dependencies: {  }
+id: footer_brand
+label: 'Footer Brand'
+revision: false
+description: null

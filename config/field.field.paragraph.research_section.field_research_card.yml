@@ -1,0 +1,46 @@
+uuid: 48b62645-3135-4ec5-993d-e01218c0d27a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_research_card
+    - paragraphs.paragraphs_type.research_card
+    - paragraphs.paragraphs_type.research_section
+  module:
+    - entity_reference_revisions
+id: paragraph.research_section.field_research_card
+field_name: field_research_card
+entity_type: paragraph
+bundle: research_section
+label: 'Research Card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      research_card: research_card
+    negate: 0
+    target_bundles_drag_drop:
+      feature_card:
+        weight: 7
+        enabled: false
+      hero_banner:
+        weight: 8
+        enabled: false
+      research_card:
+        weight: 9
+        enabled: true
+      research_section:
+        weight: 10
+        enabled: false
+      search_widget:
+        weight: 11
+        enabled: false
+      statistics_counter:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

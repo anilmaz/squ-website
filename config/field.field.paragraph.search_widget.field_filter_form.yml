@@ -1,0 +1,32 @@
+uuid: 4bdf3cc8-a825-4bfb-8400-2ff6ef790d60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_filter_form
+    - paragraphs.paragraphs_type.search_widget
+    - webform.webform.college_major_search
+  module:
+    - webform
+id: paragraph.search_widget.field_filter_form
+field_name: field_filter_form
+entity_type: paragraph
+bundle: search_widget
+label: 'Filter Form'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 10f37cea-7c5d-4c6c-9bf8-276a336b37ed
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

@@ -1,0 +1,57 @@
+uuid: 59ec004d-da79-444d-9dfa-bd4c0eddc77c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_brand
+    - field.field.block_content.footer_brand.field_footer_icon
+    - field.field.block_content.footer_brand.field_footer_logo
+    - field.field.block_content.footer_brand.field_university_name_ar
+    - field.field.block_content.footer_brand.field_university_name_en
+  module:
+    - entity_reference_revisions
+    - image
+id: block_content.footer_brand.default
+targetEntityType: block_content
+bundle: footer_brand
+mode: default
+content:
+  field_footer_icon:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_footer_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_university_name_ar:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_university_name_en:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

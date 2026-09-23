@@ -1,0 +1,19 @@
+uuid: 078924a8-d575-4113-afd5-035cee3dea8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_statistics_label
+    - paragraphs.paragraphs_type.statistics_counter
+id: paragraph.statistics_counter.field_statistics_label
+field_name: field_statistics_label
+entity_type: paragraph
+bundle: statistics_counter
+label: 'Statistics Label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

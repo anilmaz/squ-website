@@ -1,0 +1,48 @@
+uuid: b3e91144-3bdb-4968-82a1-f777355ecff7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.research_card.field_research_card_description
+    - field.field.paragraph.research_card.field_research_card_link
+    - field.field.paragraph.research_card.field_research_image
+    - paragraphs.paragraphs_type.research_card
+  module:
+    - image
+    - link
+id: paragraph.research_card.default
+targetEntityType: paragraph
+bundle: research_card
+mode: default
+content:
+  field_research_card_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_research_card_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_research_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

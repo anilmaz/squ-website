@@ -1,0 +1,10 @@
+uuid: f2ce09e1-7560-4765-8560-e873943b3a33
+langcode: en
+status: true
+dependencies: {  }
+id: about_squ
+label: 'About SQU'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

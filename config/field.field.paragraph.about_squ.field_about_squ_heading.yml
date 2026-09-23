@@ -1,0 +1,19 @@
+uuid: 453d0e24-facf-4798-9028-f8220f5739c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_about_squ_heading
+    - paragraphs.paragraphs_type.about_squ
+id: paragraph.about_squ.field_about_squ_heading
+field_name: field_about_squ_heading
+entity_type: paragraph
+bundle: about_squ
+label: 'About SQU Heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

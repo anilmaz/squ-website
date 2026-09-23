@@ -1,0 +1,804 @@
+uuid: 4ff94e5f-afc7-47a6-8b4d-ec0726c746bb
+langcode: en
+status: true
+dependencies: {  }
+id: squ_site_css
+label: 'SQU Site CSS'
+code: |-
+  /* ============================
+     SQU SITE CSS
+     ============================ */
+
+  /* --- 1. Header --- */
+
+  /*.site-header,*/
+  /*.site-header__fixable,*/
+  /*.site-header__initial,*/
+  /*.site-header__inner {*/
+  /*  background: #14181f !important;*/
+  /*}*/
+
+  /*.site-header .site-branding__name,*/
+  /*.site-header a {*/
+  /*  color: #ffffff !important;*/
+  /*}*/
+
+  /*.site-header a:hover,*/
+  /*.site-header a:focus {*/
+  /*  color: #c9a24a !important;*/
+  /*  text-decoration-color: #c9a24a !important;*/
+  /*}*/
+
+
+  :root {
+    --squ-dark: #2b3138;
+    --squ-gold: #c9922a;
+    --squ-white: #ffffff;
+  }
+
+  /* Hide Olivero's own header chrome entirely - squ_theme builds its own
+     header fresh via JS (see menu-overlay.js), relocating the actual block
+     elements out of wherever Olivero's inherited page template put them. */
+  .site-header__fixed,
+  .site-header__initial {
+    display: none !important;
+  }
+
+  /* Olivero's Site branding block brings its own blue background/padding -
+     strip that out now that it lives inside our dark header bar. */
+  .squ-header #block-squ-site-branding {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+  }
+  .squ-header #block-squ-site-branding a,
+  .squ-header #block-squ-site-branding * {
+    color: var(--squ-white) !important;
+  }
+
+  .squ-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--squ-dark);
+    padding: 0.75rem 2rem;
+    position: relative;
+    z-index: 40;
+  }
+
+  /* Site branding block (logo + title) */
+  .squ-header .block-site-branding {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .squ-header .site-logo img {
+    height: 48px;
+    width: auto;
+  }
+  .squ-header .site-name {
+    color: var(--squ-white);
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+
+  /* Right-hand cluster: search + quick links + hamburger */
+  .squ-header__right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .squ-header__quicklinks ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .squ-header__quicklinks a {
+    color: var(--squ-white);
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .squ-header__quicklinks a:hover,
+  .squ-header__quicklinks a.is-active {
+    border-color: var(--squ-gold);
+    color: var(--squ-gold);
+  }
+
+  .squ-header__search-toggle,
+  .squ-hamburger {
+    background: none;
+    border: none;
+    color: var(--squ-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+  }
+  .squ-header__search-toggle svg,
+  .squ-hamburger svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .squ-hamburger__bars {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 26px;
+  }
+  .squ-hamburger__bars span {
+    display: block;
+    height: 2px;
+    background: var(--squ-white);
+    border-radius: 1px;
+  }
+
+  @media (max-width: 768px) {
+    .squ-header {
+      padding: 0.6rem 1rem;
+    }
+    .squ-header__quicklinks {
+      display: none;
+    }
+  }
+
+
+
+
+  /* --- 2. Footer --- */
+
+  /* =========================================================
+     1. MAIN FOOTER
+     ========================================================= */
+
+  .site-footer {
+    background: #201f1f !important;
+    color: #ffffff !important;
+    position: relative;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+  }
+
+
+  /* =========================================================
+     2. TOP DECORATIVE PATTERN
+     ========================================================= */
+
+  .site-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+
+    background-image: url('/sites/default/files/website_pattern-05_1.png');
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-size: auto 32px;
+
+    z-index: 1;
+    pointer-events: none;
+  }
+
+
+  /* =========================================================
+     3. FOOTER INNER CONTAINER
+     ========================================================= */
+
+  .site-footer__inner {
+    width: 100% !important;
+    max-width: 1035px !important;
+
+    margin: 0 auto !important;
+
+    padding: 95px 0 52px !important;
+
+    display: grid !important;
+
+    /*
+     * LEFT = branding
+     * RIGHT = quick links
+     */
+    grid-template-columns: minmax(0, 2.25fr) minmax(300px, 1fr) !important;
+
+    column-gap: 0 !important;
+    row-gap: 0 !important;
+
+    align-items: start !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =========================================================
+     4. REMOVE UNWANTED OLIVERO FOOTER STRUCTURE
+     ========================================================= */
+
+  .region--footer-top {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+
+    min-width: 0 !important;
+    width: 100% !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+
+  /* =========================================================
+     5. BRANDING / LOGO AREA
+     ========================================================= */
+
+  .region--footer-top .block-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+
+  /*
+   * Keep the branding compact.
+   */
+
+  .field--name-field-footer-logo {
+    margin: 0 0 7px 0 !important;
+    padding: 0 !important;
+  }
+
+
+  /*
+   * University logo / crest
+   */
+
+  .field--name-field-footer-logo img {
+    display: block !important;
+
+    width: 55px !important;
+    height: auto !important;
+
+    margin: 0 !important;
+  }
+
+
+  /*
+   * English university name
+   */
+
+  .field--name-field-university-name-en {
+    margin: 3px 0 0 0 !important;
+
+    padding: 0 !important;
+
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+
+    color: #ffffff !important;
+
+    font-weight: 400 !important;
+  }
+
+
+  /*
+   * Arabic university name
+   */
+
+  .field--name-field-university-name-ar {
+    margin: 2px 0 0 0 !important;
+
+    padding: 0 !important;
+
+    direction: rtl !important;
+
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+
+    color: #ffffff !important;
+
+    text-align: left !important;
+  }
+
+
+  /* =========================================================
+     6. FOOTER ICONS
+     ========================================================= */
+
+  .field--name-field-footer-icon.field__items {
+    display: flex !important;
+
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+
+    align-items: center !important;
+
+    gap: 10px !important;
+
+    margin: 25px 0 0 0 !important;
+    padding: 0 !important;
+
+    list-style: none !important;
+  }
+
+
+  .field--name-field-footer-icon .field__item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+
+  /*
+   * Icon container
+   */
+
+  .paragraph--type--footer-icons {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+
+  /*
+   * Icons
+   */
+
+  .paragraph--type--footer-icons img {
+    display: block !important;
+
+    width: 28px !important;
+    height: 28px !important;
+
+    object-fit: contain;
+  }
+
+
+  /* =========================================================
+     7. QUICK LINKS
+     ========================================================= */
+
+  #block-olivero-footerquicklinks {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 0 0 34px !important;
+
+    /*
+     * Vertical separator from template
+     */
+    border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* Quick Links heading */
+
+  #block-olivero-footerquicklinks .block__title {
+    color: #c9a227 !important;
+
+    text-transform: uppercase !important;
+
+    font-size: 13px !important;
+    font-weight: 600 !important;
+
+    letter-spacing: 0.3px !important;
+
+    margin: 0 0 19px 0 !important;
+    padding: 0 !important;
+
+    line-height: 1.2 !important;
+  }
+
+
+  /* =========================================================
+     8. QUICK LINKS MENU
+     ========================================================= */
+
+  #block-olivero-footerquicklinks ul.menu {
+    display: grid !important;
+
+    /*
+     * 3 columns exactly like template
+     */
+    grid-template-columns:
+      minmax(70px, 1fr)
+      minmax(70px, 1fr)
+      minmax(110px, 1.3fr) !important;
+
+    grid-template-rows:
+      repeat(3, auto) !important;
+
+    grid-auto-flow: column !important;
+
+    column-gap: 26px !important;
+    row-gap: 15px !important;
+
+    list-style: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+
+  /* Menu items */
+
+  #block-olivero-footerquicklinks ul.menu li {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    min-width: 0 !important;
+  }
+
+
+  /* Links */
+
+  #block-olivero-footerquicklinks ul.menu a {
+    display: block !important;
+
+    color: #a9a9a9 !important;
+
+    font-size: 12px !important;
+    font-weight: 400 !important;
+
+    line-height: 1.3 !important;
+
+    text-decoration: none !important;
+
+    white-space: nowrap !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* Hover */
+
+  #block-olivero-footerquicklinks ul.menu a:hover {
+    color: #c9a227 !important;
+
+    text-decoration: none !important;
+  }
+
+
+  /* =========================================================
+     9. COPYRIGHT / BOTTOM BAR
+     ========================================================= */
+
+  #block-olivero-c2026sultanqaboosuniversityallrightsreserved {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+
+    width: 100% !important;
+
+    box-sizing: border-box !important;
+
+    background: #282626 !important;
+
+    border: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 17px 0 !important;
+
+    display: flex !important;
+
+    justify-content: space-between !important;
+
+    align-items: center !important;
+
+    gap: 20px !important;
+  }
+
+
+  /*
+   * Copyright text
+   */
+
+  #block-olivero-c2026sultanqaboosuniversityallrightsreserved p {
+    margin: 0 !important;
+
+    color: #b1b1b1 !important;
+
+    font-size: 11px !important;
+
+    line-height: 1.3 !important;
+
+    font-weight: 400 !important;
+  }
+
+
+  /*
+   * Remove block title if present
+   */
+
+  /*#block-olivero-c2026sultanqaboosuniversityallrightsreserved .block__title {*/
+  /*  display: none !important;*/
+  /*}*/
+
+
+  /* =========================================================
+     10. COPYRIGHT LINKS
+     ========================================================= */
+
+  #block-olivero-c2026sultanqaboosuniversityallrightsreserved a {
+    color: #b1b1b1 !important;
+
+    font-size: 11px !important;
+
+    text-decoration: none !important;
+  }
+
+
+  #block-olivero-c2026sultanqaboosuniversityallrightsreserved a:hover {
+    color: #c9a227 !important;
+  }
+
+
+  /* =========================================================
+     11. FOOTER BOTTOM REGION
+     ========================================================= */
+
+  .region--footer-bottom {
+    display: contents !important;
+  }
+
+
+  /* =========================================================
+     12. REMOVE OLIVERO DEFAULT SPACING
+     ========================================================= */
+
+  .site-footer .block {
+    margin-block: 0 !important;
+  }
+
+
+  .site-footer .field {
+    margin-block: 0 !important;
+  }
+
+
+  /* =========================================================
+     13. DESKTOP - 1200px+
+     ========================================================= */
+
+  @media (min-width: 1200px) {
+
+    .site-footer__inner {
+      max-width: 1035px !important;
+
+      padding-top: 95px !important;
+      padding-bottom: 52px !important;
+    }
+
+  }
+
+
+  /* =========================================================
+     14. TABLET
+     ========================================================= */
+
+  @media (max-width: 1199px) {
+
+    .site-footer__inner {
+      max-width: calc(100% - 80px) !important;
+
+      grid-template-columns:
+        minmax(0, 2fr)
+        minmax(280px, 1fr) !important;
+    }
+
+  }
+
+
+  /* =========================================================
+     15. SMALL TABLET
+     ========================================================= */
+
+  @media (max-width: 900px) {
+
+    .site-footer__inner {
+      max-width: calc(100% - 60px) !important;
+
+      grid-template-columns: 1fr !important;
+
+      padding-top: 80px !important;
+      padding-bottom: 40px !important;
+    }
+
+
+    #block-olivero-footerquicklinks {
+      grid-column: 1 !important;
+      grid-row: 2 !important;
+
+      margin-top: 35px !important;
+
+      padding: 30px 0 0 0 !important;
+
+      border-left: 0 !important;
+      border-top: 1px solid rgba(255,255,255,0.12) !important;
+    }
+
+
+    #block-olivero-c2026sultanqaboosuniversityallrightsreserved {
+      grid-column: 1 !important;
+      grid-row: 3 !important;
+    }
+
+  }
+
+
+  /* =========================================================
+     16. MOBILE
+     ========================================================= */
+
+  @media (max-width: 600px) {
+
+    .site-footer__inner {
+      max-width: calc(100% - 40px) !important;
+
+      padding-top: 70px !important;
+      padding-bottom: 30px !important;
+    }
+
+
+    #block-olivero-footerquicklinks ul.menu {
+      grid-template-columns: repeat(2, 1fr) !important;
+
+      grid-auto-flow: row !important;
+
+      column-gap: 20px !important;
+      row-gap: 14px !important;
+    }
+
+
+    #block-olivero-c2026sultanqaboosuniversityallrightsreserved {
+      flex-direction: column !important;
+
+      align-items: flex-start !important;
+
+      padding: 15px 20px !important;
+    }
+
+  }
+
+
+  /* =========================================================
+     17. VERY SMALL MOBILE
+     ========================================================= */
+
+  @media (max-width: 400px) {
+
+    #block-olivero-footerquicklinks ul.menu {
+      grid-template-columns: 1fr !important;
+    }
+
+  }
+
+  .region--footer-bottom {
+    display: contents !important;
+  }
+
+
+  /* Copyright block */
+
+  #block-olivero-c2026sultanqaboosuniversityallrightsreserved {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 17px 0 16px !important;
+
+    background: #282626 !important;
+
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+
+    box-sizing: border-box;
+
+    border: 0 !important;
+  }
+
+
+  /* Copyright text */
+
+  #block-olivero-c2026sultanqaboosuniversityallrightsreserved p {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #aaa6a6 !important;
+
+    font-size: 10px !important;
+    font-weight: 400 !important;
+  }
+
+
+  /* Copyright links */
+
+  #block-olivero-c2026sultanqaboosuniversityallrightsreserved a {
+    color: #aaa6a6 !important;
+    font-size: 10px !important;
+    text-decoration: none !important;
+  }
+
+  #block-olivero-c2026sultanqaboosuniversityallrightsreserved a:hover {
+    color: #c9a227 !important;
+  }
+
+  /* Target the container wrapping both the Title (Copyright) and Description (Links) */
+  .block-copyright-footer {
+      display: flex;
+      justify-content: space-between; /* Pushes copyright to the left, links to the right */
+      align-items: center;           /* Vertically aligns both items perfectly */
+      padding: 15px 40px;            /* Adds matching horizontal breathing room */
+      background-color: #1a1a1a;     /* Matches your dark bottom bar color */
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  /* Style the Block Title (Your Copyright Text) */
+  .block-copyright-footer .block-title {
+      color: #888888;                /* Muted gray text color */
+      font-size: 12px;               /* Clean, small footer font size */
+      margin: 0;                     /* Removes Drupal's default block title spacing */
+      font-weight: normal;           /* Removes bold styling from the title */
+  }
+
+  /* Style the Block Description/Content (Your Privacy Links) */
+  .block-copyright-footer .block-content {
+      color: #888888;                /* Matching muted gray text color */
+      font-size: 12px;               /* Matching font size */
+      margin: 0;
+  }
+
+  /* Optional: Ensure any links inside your description match the design */
+  .block-copyright-footer .block-content a {
+      color: #888888;
+      text-decoration: none;
+  }
+
+  .block-copyright-footer .block-content a:hover {
+      text-decoration: underline;    /* Adds clean interactive hover feedback */
+  }
+
+
+  /* --- 3. Hero Banner --- */
+
+
+  /* --- 4. Search Widget --- */
+
+
+  /* --- 5. Feature Cards --- */
+
+
+  /* --- 6. Stat Counters --- */
+
+
+  /* --- 7. Research Section --- */
+
+
+  /* --- 8. About SQU --- */
+
+
+  /* --- 9. News Section --- */
+
+
+  /* --- 10. Student Life Gallery --- */
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

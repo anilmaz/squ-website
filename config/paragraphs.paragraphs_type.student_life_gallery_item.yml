@@ -1,0 +1,10 @@
+uuid: 283aacdd-c06d-4938-9a9a-2b3f581eacd3
+langcode: en
+status: true
+dependencies: {  }
+id: student_life_gallery_item
+label: 'Student Life Gallery Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

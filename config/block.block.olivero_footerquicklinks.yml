@@ -1,0 +1,25 @@
+uuid: dc93c298-3583-4bb3-9f7d-6cd1ce68b059
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-quick-links
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_footerquicklinks
+theme: olivero
+region: footer_bottom
+weight: -7
+provider: null
+plugin: 'system_menu_block:footer-quick-links'
+settings:
+  id: 'system_menu_block:footer-quick-links'
+  label: 'Quick Links'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }
